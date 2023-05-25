@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entities.Property;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/properties")
 public class PropertiesREST {
 	Property properties[] = new Property[15];
 	Property property1 = new Property(1,"https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "123 Calle del Roble, Ciudad Ficticia", "Casa de estilo victoriano con tejado a dos aguas y detalles ornamentales en su fachada", "$500,000");
