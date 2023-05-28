@@ -1,12 +1,14 @@
 package com.example.demo.rest;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entities.Property;
+
 
 @RestController
 @RequestMapping("/properties")
@@ -28,6 +30,7 @@ public class PropertiesREST {
 	Property property14 = new Property(14,"https://images.pexels.com/photos/4497373/pexels-photo-4497373.jpeg?auto=compress&cs=tinysrgb&w=600","321 Avenida del Concreto, Ciudad Moderna","Casa de arquitectura brutalista, con formas angulares y una fachada de concreto.","$950,000");
 	Property property15 = new Property(15,"https://images.pexels.com/photos/14356690/pexels-photo-14356690.jpeg?auto=compress&cs=tinysrgb&w=600","789 Calle Neoclásica, Atenas Eterna","Casa de estilo neoclásico con columnas corintias, frontón triangular y jardines simétricos","$1,250,000");
 	
+	@CrossOrigin(origins = "http://localhost:8080")
 	@GetMapping
 	public ResponseEntity<Property[]> getProperty(){
 		properties[0] = property1;
