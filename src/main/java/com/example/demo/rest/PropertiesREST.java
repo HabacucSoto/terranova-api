@@ -32,7 +32,7 @@ public class PropertiesREST {
 	Property property15 = new Property(15,"https://images.pexels.com/photos/14356690/pexels-photo-14356690.jpeg?auto=compress&cs=tinysrgb&w=600","789 Calle Neoclásica, Atenas Eterna","Casa de estilo neoclásico con columnas corintias, frontón triangular y jardines simétricos","$1,250,000");
 	
 	
-	@GetMapping
+	@GetMapping("/properties")
 	public ResponseEntity<Property[]> getProperty(){
 		properties[0] = property1;
 		properties[1] = property2;
